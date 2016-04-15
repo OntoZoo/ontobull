@@ -1,0 +1,73 @@
+BFO 1.1/OBO_REL	BFO 2.0 Classes/RO	BFO 2.0/RO labels
+http://www.ifomis.org/bfo/1.1/snap#Continuant	http://purl.obolibrary.org/obo/BFO_0000002	continuant
+http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary	http://purl.obolibrary.org/obo/BFO_0000140	continuant fiat boundary
+http://www.ifomis.org/bfo/1.1/snap#Disposition	http://purl.obolibrary.org/obo/BFO_0000016	disposition
+http://www.ifomis.org/bfo/1.1#Entity	http://purl.obolibrary.org/obo/BFO_0000001	entity
+http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart	http://purl.obolibrary.org/obo/BFO_0000024	fiat object
+http://www.ifomis.org/bfo/1.1/snap#Function	http://purl.obolibrary.org/obo/BFO_0000034	function
+http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant	http://purl.obolibrary.org/obo/BFO_0000031	generically dependent continuant
+http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant	http://purl.obolibrary.org/obo/BFO_0000004	independent continuant
+http://www.ifomis.org/bfo/1.1/snap#MaterialEntity	http://purl.obolibrary.org/obo/BFO_0000040 	material entity
+http://www.ifomis.org/bfo/1.1/snap#Object	http://purl.obolibrary.org/obo/BFO_0000030	object
+http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate	http://purl.obolibrary.org/obo/BFO_0000027	object aggregate
+http://www.ifomis.org/bfo/1.1/span#Occurrent	http://purl.obolibrary.org/obo/BFO_0000003	occurrent
+http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion	http://purl.obolibrary.org/obo/BFO_0000026	one-dimensional spatial region
+http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion	http://purl.obolibrary.org/obo/BFO_0000038	one-dimensional temporal region
+http://www.ifomis.org/bfo/1.1/span#ProcessualEntity	http://purl.obolibrary.org/obo/BFO_0000015	process
+http://www.ifomis.org/bfo/1.1/span#ProcessBoundary	http://purl.obolibrary.org/obo/BFO_0000035	process boundary
+http://www.ifomis.org/bfo/1.1/snap#Quality	http://purl.obolibrary.org/obo/BFO_0000019	quality
+http://www.ifomis.org/bfo/1.1/snap#RealizableEntity	http://purl.obolibrary.org/obo/BFO_0000017	realizable entity
+http://www.ifomis.org/bfo/1.1/snap#Role	http://purl.obolibrary.org/obo/BFO_0000023	role
+http://www.ifomis.org/bfo/1.1/snap#Site	http://purl.obolibrary.org/obo/BFO_0000029	site
+http://www.ifomis.org/bfo/1.1/snap#SpatialRegion	http://purl.obolibrary.org/obo/BFO_0000006	spatial region
+http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion	http://purl.obolibrary.org/obo/BFO_0000011	spatiotemporal region
+http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant	http://purl.obolibrary.org/obo/BFO_0000020	specifically dependent continuant
+http://www.ifomis.org/bfo/1.1/span#TemporalRegion	http://purl.obolibrary.org/obo/BFO_0000008	temporal region
+http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion	http://purl.obolibrary.org/obo/BFO_0000028	three-dimensional spatial region
+http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion	http://purl.obolibrary.org/obo/BFO_0000009	two-dimensional spatial region
+http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion	http://purl.obolibrary.org/obo/BFO_0000018	zero-dimensional spatial region
+http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion	http://purl.obolibrary.org/obo/BFO_0000148	zero-dimensional temporal region
+http://www.obofoundry.org/ro/ro.owl#adjacent_to	http://purl.obolibrary.org/obo/RO_0002220	adjacent to
+http://www.obofoundry.org/ro/ro.owl#agent_in	http://purl.obolibrary.org/obo/RO_0002217	actively participates in (agent in)
+http://www.obofoundry.org/ro/ro.owl#contained_in	http://purl.obolibrary.org/obo/RO_0001018	contained in
+http://www.obofoundry.org/ro/ro.owl#contains	http://purl.obolibrary.org/obo/RO_0001019	contains
+http://www.obofoundry.org/ro/ro.owl#derived_into	http://purl.obolibrary.org/obo/RO_0001001	derives into
+http://www.obofoundry.org/ro/ro.owl#derives_from	http://purl.obolibrary.org/obo/RO_0001000 	derives from
+http://www.obofoundry.org/ro/ro.owl#has_agent	http://purl.obolibrary.org/obo/RO_0002218 	has agent
+http://www.obofoundry.org/ro/ro.owl#has_part	http://purl.obolibrary.org/obo/BFO_0000051 	has part
+http://www.obofoundry.org/ro/ro.owl#part_of	http://purl.obolibrary.org/obo/BFO_0000050	part of
+http://www.obofoundry.org/ro/ro.owl#has_participant	http://purl.obolibrary.org/obo/RO_0000057	has participant
+http://www.obofoundry.org/ro/ro.owl#participates_in	http://purl.obolibrary.org/obo/RO_0000056	participates in
+http://www.obofoundry.org/ro/ro.owl#located_in	http://purl.obolibrary.org/obo/RO_0001025	located in
+http://www.obofoundry.org/ro/ro.owl#preceded_by	http://purl.obolibrary.org/obo/BFO_0000062	preceded by
+http://www.obofoundry.org/ro/ro.owl#precedes	http://purl.obolibrary.org/obo/BFO_0000063 	precedes
+http://www.obofoundry.org/ro/ro.owl#transformation_of	http://purl.obolibrary.org/obo/RO_0002494 	transformation of
+http://purl.org/obo/owl/OBO_REL#bearer_of	http://purl.obolibrary.org/obo/RO_0000053	bearer of
+http://purl.org/obo/owl/OBO_REL#function_of	http://purl.obolibrary.org/obo/RO_0000079	function of
+http://purl.org/obo/owl/OBO_REL#inheres_in	http://purl.obolibrary.org/obo/RO_0000052	inheres in
+http://purl.org/obo/owl/OBO_REL#quality_of	http://purl.obolibrary.org/obo/RO_0000080	is quality of
+http://purl.org/obo/owl/OBO_REL#role_of	http://purl.obolibrary.org/obo/RO_0000081	role of
+http://purl.org/obo/owl/OBO_REL#unfolds_in	http://purl.obolibrary.org/obo/BFO_0000066	occurs in
+http://purl.obolibrary.org/obo/OBI_0000294	http://purl.obolibrary.org/obo/RO_0000059	concretizes
+http://purl.obolibrary.org/obo/OBI_0000297	http://purl.obolibrary.org/obo/RO_0000058	is concretized as
+http://purl.obolibrary.org/obo/OBI_0000300	http://purl.obolibrary.org/obo/BFO_0000054	realized in
+http://purl.obolibrary.org/obo/OBI_0000308 	http://purl.obolibrary.org/obo/BFO_0000055	realizes
+http://purl.obolibrary.org/obo/OBI_0000306	http://purl.obolibrary.org/obo/RO_0000085	has function
+http://purl.obolibrary.org/obo/OBI_0000316	http://purl.obolibrary.org/obo/RO_0000087	has role
+http://purl.obolibrary.org/obo/OBI_0000298	http://purl.obolibrary.org/obo/RO_0000086	has quality
+http://purl.obolibrary.org/obo/BFO_0000007	http://purl.obolibrary.org/obo/BFO_0000015	process
+http://purl.obolibrary.org/obo/BFO_0000052	http://purl.obolibrary.org/obo/RO_0000052	inheres in
+http://purl.obolibrary.org/obo/BFO_0000053	http://purl.obolibrary.org/obo/RO_0000053	bearer of
+http://purl.obolibrary.org/obo/BFO_0000056	http://purl.obolibrary.org/obo/RO_0000056	participates in
+http://purl.obolibrary.org/obo/BFO_0000057	http://purl.obolibrary.org/obo/RO_0000057	has participant
+http://purl.obolibrary.org/obo/BFO_0000058	http://purl.obolibrary.org/obo/RO_0000058	is concretized as
+http://purl.obolibrary.org/obo/BFO_0000059	http://purl.obolibrary.org/obo/RO_0000059	concretizes
+http://purl.obolibrary.org/obo/BFO_0000081	http://purl.obolibrary.org/obo/RO_0000081	role of
+http://purl.obolibrary.org/obo/BFO_0000082	http://purl.obolibrary.org/obo/RO_0001025	located in
+http://purl.obolibrary.org/obo/BFO_0000086	http://purl.obolibrary.org/obo/RO_0000086	has quality
+http://purl.obolibrary.org/obo/BFO_0000087	http://purl.obolibrary.org/obo/RO_0000087	has role
+http://purl.obolibrary.org/obo/RO_0001000	http://purl.obolibrary.org/obo/RO_0001000	derives from
+http://purl.obolibrary.org/obo/BFO_0000060	http://purl.obolibrary.org/obo/RO_0002087	immediately_preceded_by
+http://purl.obolibrary.org/obo/BFO_0000079	http://purl.obolibrary.org/obo/RO_0000079	function of
+http://purl.obolibrary.org/obo/BFO_0000085	http://purl.obolibrary.org/obo/RO_0000085	has function
+http://purl.obolibrary.org/obo/BFO_0000061	http://purl.obolibrary.org/obo/RO_0002090	immediately_precedes

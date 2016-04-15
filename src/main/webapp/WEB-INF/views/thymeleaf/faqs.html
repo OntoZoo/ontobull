@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" th:include="/layout :: jsSection">
+</script>
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+
+<h3 class="head3_darkred">Frequently Asked Questions</h3>
+<p><strong>1. What is Ontocow?</strong></p>
+<p>Ontocow is a web program that supports automatical conversion and updating of an ontology that uses an old version of IRIs or imported ontology (e.g., BFO). Ontocow stands for ontology conversion web. </p>
+<p><strong>2. What is BFOConvert? </strong></p>
+<p> BFOConvert is an Ontocow subprogram that automatically updates the version of BFO and RO in a specific target ontology to their most updated version. The most updated BFO version is now version 2.0. </p>
+<p><strong>3.</strong><strong> Who are primary   users of BFOConvert?</strong></p>
+<p> Developers of formal ontologies using BFO as the top ontology.   </p>
+<p><strong>4.</strong><strong> Can we use BFOConvert for conversion of an ontology that does not have BFO terms?</strong></p>
+<p> Yes. You can  do it after you provides your own customized mapping file.  </p>
+<p><strong>5.</strong><strong> What is ontology term IRI? </strong></p>
+<p> IRI represents &quot;internationalized resource identifier&quot;, which was defined by the <a href="https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force" title="Internet Engineering Task Force">Internet Engineering Task Force</a> (IETF) in 2005 as a new internet standard to extend upon the existing <a href="https://en.wikipedia.org/wiki/Uniform_resource_identifier" title="Uniform resource identifier">uniform resource identifier</a> (URI) scheme.  The new standard was published in <a rel="nofollow" href="http://tools.ietf.org/html/rfc3987">RFC 3987</a>.</p>
+<p><br/>
+  See more information in <a href="tutorial.html" th:href="@{/tutorial}">Tutorial</a>.</p>
+<p>&nbsp;</p>
+
+
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

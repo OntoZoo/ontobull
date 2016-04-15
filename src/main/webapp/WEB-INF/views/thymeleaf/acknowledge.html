@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" th:include="/layout :: jsSection">
+</script>
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+<h3 class="head3_darkred">Acknowledgements</h3>
+<p>&nbsp;</p>
+<p>The  BFOConvert software was primarily developed by  Allen Xiang during 2012 and 2013, and then by Edison Ong in 2015, with the guidance of Drs. <a href="http://cbil.upenn.edu/profile-staff_bio/39">Jie Zheng</a> and Dr. <a href="http://www.hegroup.org/aboutUs/Oliver.html">Yongqun &quot;Oliver&quot; He</a>. Both Allen and Edison are from Dr. He's group at the University of Michigan Medical School. This research was supported by  NIH-NIAID grant R01AI081062.</p>
+<p>Oliver designed the web framework. Oliver, Edison, Allen,  Jie, and Dr. <a href="http://ontology.buffalo.edu/smith/">Barry Smith</a> provided the text description on different pages of the program. </p>
+<p>We acknowledge the support from many ontology developers around the world. For example, Dr.  <a href="http://james.overton.ca/">James A. Overton</a>  provided suggestions and comments during the first version of BFOConvert development. Alan Ruttenberg provides help in terms of the BFO/RO IRI mappings. </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

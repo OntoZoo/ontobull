@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" th:include="/layout :: jsSection">
+</script>
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+
+<h3 class="head3_darkred">Related Web Links:</h3>
+<p>&nbsp;</p>
+<p>This page provides a list of web pages related to the BFOConvert program:</p>
+<p>&nbsp;</p>
+<p><strong>Biomedical Ontologies:  </strong></p>
+<ul>
+  <li> Ontologies in OBO Foundry: <a href="http://www.obofoundry.org" target="_blank">http://www.obofoundry.org</a></li>
+  <li>BFO 1.1: <a href="http://www.ontobee.org/browser/index.php?o=BFO11" target="_blank">http://www.ontobee.org/browser/index.php?o=BFO11</a></li>
+  <li>Latest BFO 2: <a href="http://www.ontobee.org/browser/index.php?o=BFO" target="_blank">http://www.ontobee.org/browser/index.php?o=BFO</a> (in Ontobee)</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Ontology Tools:  </strong></p>
+<ul>
+  <li> Protege ontology editor: <a href="http://protege.stanford.edu/" target="_blank">http://protege.stanford.edu/</a></li>
+  <li>NCBO BioPortal: <a href="http://bioportal.bioontology.org/" target="_blank">http://bioportal.bioontology.org/</a></li>
+  <li>OWLAPI: <a href="http://owlapi.sourceforge.net/" target="_blank">http://owlapi.sourceforge.net/</a> </li>
+  <li>Ontobee: <a href="http://www.ontobee.org/" target="_blank">http://www.ontobee.org/</a></li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Related Knowledge:  </strong></p>
+<ul>
+  <li>Ontology: <a href="https://en.wikipedia.org/wiki/Ontology" target="_blank">https://en.wikipedia.org/wiki/Ontology</a></li>
+  <li>Internationalized Resource Identifier (IRI): <a href="internationalized resource identifier" target="_blank">https://en.wikipedia.org/wiki/Internationalized_resource_identifier </a></li>
+  <li>Ontology header: <a href="http://www.w3.org/TR/owl-ref/#Ontology-def" target="_blank">http://www.w3.org/TR/owl-ref/#Ontology-def</a></li>
+  <li>XML Namespaces (<em>xmlns</em>): <a href="http://www.w3schools.com/xml/xml_namespaces.asp" target="_blank">http://www.w3schools.com/xml/xml_namespaces.asp</a></li>
+  <li>OWL import by <em>owl:imports</em>: <a href="http://www.w3.org/TR/owl-ref/#imports-def" target="_blank">http://www.w3.org/TR/owl-ref/#imports-def</a></li>
+</ul>
+<p>&nbsp;</p>
+
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

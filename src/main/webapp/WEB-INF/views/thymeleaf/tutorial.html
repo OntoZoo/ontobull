@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" th:include="/layout :: jsSection">
+</script>
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+
+<h3 class="head3_darkred">Tutorial</h3>
+<p>&nbsp;</p>
+<p>Following is a tutorial of the major parts needed for executing BFOConvert: </p>
+<p>&nbsp;</p>
+<p><strong>IRI mapping file:  </strong></p>
+<p> An IRI mapping file is a text file that is used to update IRI. The requirements of the file include:</p>
+<ul>
+  <li>The first line should be a header that lists the header information for the columns.</li>
+  <li>At least two columns are required: the first column represents the old IRIs, and the second column represents the new IRIs. </li>
+  <li>More columns can be added. For example,  the BFOConvert includes a third column that represents the labels of the IRIs.</li>
+  <li>The default header cleanup file is <a th:href="@{/resources/alltermMapping2.0.txt}">HERE</a>.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Header Cleanup File:</strong><strong></strong> </p>
+<p> The file is an optional text file and used for final OWL output cleanup. Specifically, when a header cleanup file is provided, BFOConvert will remove/add/replace xmlns and/or OWL imports heads to the output OWL file based on the information provided in the header file.</p>
+<p> The requirements of a  header cleanup file  include:</p>
+<ul>
+  <li>The first line should be a header that lists the header information for the columns.</li>
+  <li>The first column is the action to be performed on the output. Currently supported options include: <strong>add</strong>, <strong>remove</strong>, <strong>replace</strong>.</li>
+  <li>The second column is the type of a header. Currently supported options include: <strong>xmlns</strong>, <strong>import</strong>. </li>
+  <li>The third column contains IRIs. If action is <strong>replace</strong>, please provide both new IRI and old IRI separated by ';'. </li>
+  <li>The default header cleanup file is <a th:href="@{/resources/namespaceCleanup.txt}">HERE</a>.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Examples:</strong> </p>
+<p>IAO conversion: </p>
+<ul>
+  <li><a th:href="@{/resources/iao_1.1.zip}">Input file</a> (Note that the IAO file is a Zip file. The iao.owl file uses BFO version 1.1.) </li>
+  <li><a th:href="@{/resources/iao_2.0.zip}">Output file</a></li>
+</ul>
+<p>OPL conversion:</p>
+<ul>
+  <li><a th:href="@{/resources/opl_1.1.owl}" target="_blank">Input file</a> (Note that the OPL file is a owl file. The iao.owl file uses BFO version 1.1.) </li>
+  <li><a th:href="@{/resources/opl_2.0.owl}" target="_blank">Output file</a></li>
+  </ul>
+<p><strong>Note</strong>: an example file for converting BFO Pre-Graz will be provided later. </p>
+<p>&nbsp;</p>
+
+
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

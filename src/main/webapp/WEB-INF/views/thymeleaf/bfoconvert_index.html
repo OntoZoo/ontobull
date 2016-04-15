@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>BFOConvert</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+<h3 class="header_darkred">BFOConvert: <strong>Automatically Convert a BFO Ontology to Use the Most Recent Versions of BFO and RO </strong></h3>
+      <p>BFOConvert converts an ontology using a previous BFO version (including version 1.1 and the pre-Graz version) as its upper level ontology in such way that it will use the most recent BFO OWL 2,0 version. BFOConvert also facilitates the conversion of an ontology to the most recent version of the OBO Relation Ontology (RO). BFOConvert can also be used to convert an ontology with a customized IRI mapping file to update any ontology term IRIs.</p>
+      <p>Over 100 biological and clinical ontologies, many of them in the <a href="http://www.obofoundry.org/">OBO ontology library</a>, are built on the <a href="http://ifomis.uni-saarland.de/bfo/">Basic Formal Ontology (BFO)</a>, and use a common set of relations defined in the <a href="https://github.com/oborel/obo-relations">OBO Relation Ontology (RO)</a>. The new version of BFO OWL (version 2.0) has stable term identifiers defined in accordance with the  <a href="http://www.obofoundry.org/id-policy.shtml">OBO Foundry ID Policy</a>. Similarly, the old version of RO is deprecated and replaced with a new <a href="https://github.com/oborel/obo-relations">2015 version</a>. The new RO has been extended to include commonly used relations originally generated from other OBO library ontologies such as the Ontology for Biomedical Investigations (OBI). Since many OBO library ontologies use BFO 1.1/pre-Graz and old OBO RO relations, there is a critical need to update these ontologies by converting the BFO terms and relations to the latest BFO OWL 2.0 and RO. </p>
+      <p>Please use the following form to run the BFOConvert program. </p>
+
+
+	<form method="post" th:object="${userInputForm}"
+		th:action="@{/bfoconvert}" enctype="multipart/form-data">
+		
+		<fieldset>
+		<legend><strong>Please upload an <span class="darkred">OWL</span> or <span class="darkred">ZIP</span> input file as your target OWL files (RDF/XML format) file:</strong></legend>
+
+		<span></span>
+		<div th:if="${#fields.hasErrors('globalMessage')}">
+			<div th:each="err : ${#fields.errors('globalMessage')}" th:text="${err}"><p>Incorrect input</p></div>
+		</div>
+		
+		<div>
+		<input type="file" name="uploadFile" size="60" th:field="*{uploadFile}" />
+		</div>
+		<div th:if="${#fields.hasErrors('uploadFile')}" th:errors="*{uploadFile}">Incorrect File format etc.</div>
+		
+		<p style="width:80%">Here are two example input files:<a th:href="@{/resources/iao_1.1.zip}"> IAO.zip</a>,  <a th:href="@{/resources/opl_1.1.owl}" target="_blank">OPL.owl</a>. You can download an example file and upload it here.  Please see <a th:href="@{/tutorial}">Tutorial</a> for more detail.</p>
+		
+		</fieldset>
+		
+		<br/><br/>
+		
+		<fieldset>
+		
+		<legend><strong>IRI Mapping file</strong></legend>
+		
+		<p style="width:80%">The default mapping file is provided below, which contains the class mapping from BFO 1.1 to BFO 2.0 and relation mapping from OBO-REL, ro.owl, and OBI to BFO 2.0 or RO: </p>
+		
+		<a th:href="@{/resources/alltermMapping2.0.txt}">Default</a><br/><br/>
+		
+		<span>Alternatively, please upload a custom IRI Mapping file: </span>
+		<div>
+		<input type="file" name="uploadMap" size="60" th:field="*{uploadMap}"/>
+		</div>
+				
+		</fieldset>
+		
+		<br/><br/>
+				
+		<fieldset>
+		<legend><strong>Optional: Header Cleanup File</strong></legend>
+		
+		<p style="width:80%">The header cleanup file is optional and used to remove/add xmins and/or OWL imports heads to the output OWL file. </p>
+		
+		<a th:href="@{/resources/namespaceCleanup.txt}">Default</a><br/><br/>
+		
+		<span>Alternatively, please upload a custom Header Cleanup file: </span>
+		<div>
+		<input type="file" name="uploadClean" size="60" th:field="*{uploadClean}"/>
+		</div>
+		
+		</fieldset>
+		
+		<br/><br/>
+		
+		<input type="submit" value="Get output file" />
+		
+	</form>
+
+
+
+
+<p>&nbsp;</p>
+<p>Please let us know if you have any questions or comments. Thank you!</p>
+
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

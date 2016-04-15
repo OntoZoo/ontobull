@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="js/scriptMain.js"></script>
+<script type="text/javascript" th:include="/layout :: jsSection"></script>
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+<p><strong>Ontocow</strong> is an <strong>onto</strong>logy <strong>co</strong>nversion <strong>w</strong>eb application. Ontocow supports automatica conversion of an ontology (e.g., Basic Formal Ontology or BFO) from an old version to a new version. The Ontocow web interface is intuitive and includes three steps: (i) upload the ontology OWL source file; (ii) define ontology term IRI mapping; and (iii) provide header cleanup setting (optional). With the required information provided, the backend Ontocow Java program automatically converts the uploaded OWL ontology file to an updated version. BFOconvert is an Ontocow subprogram supporting the conversion of an ontology that imports a previous version of the BFO.    </p>
+<p>Before Ontocow execuation, please provide three types of information as indicated below:  </p>
+<blockquote>
+  <table style="width=90%;align=left">
+   <tr>
+    <td>
+	<form method="post" th:object="${userInputForm}"
+		th:action="@{/convert}" enctype="multipart/form-data">
+		
+		<fieldset>
+		<legend><strong><font color="#8B0000">Step 1. Please upload an <span class="darkred">OWL</span> or <span class="darkred">ZIP</span> input file as your target OWL files (RDF/XML format) file:</font></strong></legend>
+		
+		<div>
+		<input type="file" name="uploadFile" size="60" th:field="*{uploadFile}" />
+		</div>
+		<div th:if="${#fields.hasErrors('uploadFile')}" th:errors="*{uploadFile}">Incorrect File format etc.</div>
+		
+		<p style="width:80%">Here are two example input files:<a th:href="@{/resources/iao_1.1.zip}"> IAO.zip</a>,  <a th:href="@{/resources/opl_1.1.owl}" target="_blank">OPL.owl</a>. You can download an example file and upload it here.  Please see <a th:href="@{/tutorial}">Tutorial</a> for more detail.</p>
+		
+		</fieldset>
+		
+		<br/><br/>
+		
+		<fieldset >
+		
+		<legend><strong><font color="#8B0000">Step 2. Provide IRI mapping information:</font></strong></legend>
+		
+		<p style="width:80%">Please enter old IRI and new IRI for the update mapping.<a href="javascript:exampleMapping()">Example</a></p>
+		
+		
+		<div style="width:90%;border:1px solid black">
+			<table id="mapping" style="width:100%">
+				<thead>
+					<tr style="border:1px solid black">
+						<th style="text-align:center;width:45%">Old IRI</th>
+						<th style="text-align:center;width:45%">New IRI</th>
+					</tr>
+                    <tr style="border:1px solid black">
+	                    <th style="text-align:center">
+	                        <input type="text" id="old-iri" style="width:90%"/>
+	                    </th>
+	                    <th style="text-align:center">
+	                        <input type="text" id="new-iri" style="width:90%"/>
+	                    </th>
+	                    <th>
+	                        <input type="button" id="add_map" value="Add" th:onclick="${'addMapping()'}"/>
+	                    </th>
+                    </tr>
+				</thead>
+				<tbody th:each="hashMap, stat: *{hashMap}">
+				</tbody>
+		    </table>
+		</div>
+		
+		<br/>
+		
+		<span>Alternatively, please upload a custom IRI Mapping file: </span>
+		<div>
+		<input type="file" name="uploadMap" size="60" th:field="*{uploadMap}" />
+		</div>
+				
+		</fieldset>
+		
+		<br/><br/>
+				
+		<fieldset>
+		<legend><strong><font color="#8B0000">Step 3 (Optional): Provide ontology header cleanup information:</font></strong></legend>
+		
+<p style="width:80%">The header cleanup is optional and used to remove/add xmins and/or OWL imports heads to the output OWL file. <a href="javascript:exampleCleaning()">Example</a></p>
+		
+		<div style="width:90%;border:1px solid black">
+        <table id="cleaning" style="width:100%">
+        <tr style="border:1px solid black">
+        <td style="text-align:center;width:22.5%">
+        Action
+        </td>
+        <td style="text-align:center;width:22.5%">
+        Type
+        </td>
+        <td style="text-align:center;width:45%">
+        IRI
+        </td>
+        </tr>
+        <tr style="border:1px solid black">
+        <td style="text-align:center">
+        <select id="clean-action" style="width:90%">
+            <option value="">-----</option>
+            <option value="add">Add</option>
+            <option value="remove">Remove</option>
+            <option value="replace">Replace</option>
+        </select>
+        </td>
+        <td style="text-align:center">
+        <select id="clean-type" style="width:90%">
+            <option value="">-----</option>
+            <option value="xmlns">Prefix(xmlns)</option>
+            <option value="import">Import</option>
+        </select>
+        </td>
+        <td style="text-align:center">
+        <input type="text" id="clean-iri" style="width:90%"/>
+        </td>
+        <td>
+        <input type="button" id="add_map" value="Add" th:onclick="${'addCleaning()'}"/>
+        </td>
+        </tr>
+        </table>
+        </div>
+        
+        <br/>
+		
+		<span>Alternatively, please upload a custom Header Cleanup file: </span>
+		<div>
+		<input type="file" name="uploadClean" size="60" th:field="*{uploadClean}"/>
+		</div>
+		
+		</fieldset>
+		
+		<br/>
+		
+		<span></span>
+        <div th:if="${#fields.hasErrors('globalMessage')}">
+            <div th:each="err : ${#fields.errors('globalMessage')}" th:text="${err}"><p>Incorrect input</p></div>
+        </div>
+        
+        <br/>
+		
+		<input type="submit" value="Get output file" />
+		
+	</form>
+
+
+	</td>
+     </tr>
+  </table>
+</blockquote>
+
+<p>&nbsp;</p>
+<p>Please <a href="contactus.html">let us know</a> if you have any questions or comments. Thank you!</p>
+
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

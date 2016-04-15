@@ -1,0 +1,13 @@
+action	type	value
+remove	xmlns	http://www.obofoundry.org/ro/ro.owl#
+remove	xmlns	http://www.ifomis.org/bfo/1.1/span#
+remove	xmlns	http://www.ifomis.org/bfo/1.1/snap#
+remove	xmlns	http://purl.org/obo/owl/OBO_REL#
+add	xmlns	http://purl.obolibrary.org/obo/
+add	import	http://purl.obolibrary.org/obo/bfo/2014-05-03/classes-only.owl
+add	import	http://purl.obolibrary.org/obo/ro/releases/2015-02-11/core.owl
+remove	import	http://www.ifomis.org/bfo/1.1
+remove	import	http://www.obofoundry.org/ro/ro.owl
+remove	import	http://purl.obolibrary.org/obo/ro/releases/2015-04-12/core.owl
+remove xmlns http://www.ifomis.org/bfo/1.1#
+remove	xmlns	http://purl.org/obo/owl/ro_bfo_bridge/1.1#

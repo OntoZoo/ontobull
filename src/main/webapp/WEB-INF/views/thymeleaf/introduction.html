@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" th:include="/layout :: jsSection">
+</script>
+</head>
+<body>
+<header th:include="/layout :: headerSection"></header>
+<div id="mainbody">
+
+
+<h3 class="head3_darkred">Introduction</h3>
+
+<p>Biological ontologies are sets of computer- and human-interpretable terms and relations  that represent entities in the biological world and how they relate to each other. Biomedical ontologies have emerged as a major tool for the integration and analysis of the large amounts of heterogeneous biological data available in the post-genomics era. The most popular ontology is likely the Gene Ontology (GO) that provides controlled and  standardized terms for naming different types of biological processes, cellular components, and molecular
+  functions. The Ontology for Biomedical Investigations (OBI), co-developed by approximately 20 communities, has been used for representation of a wide range of experimental investigations. Another example is the Vaccine Ontology (VO), which has been used in various vaccine data integration and literature mining. </p>
+<p>Ontologies are frequently updated. It is often time consuming to update an upper level ontology, especially when the upper level ontology changes its term IRIs and relations. Although these reference ontologies are usually stable, they are still under updates, sometimes major updates. For example, BFO has been updated from BFO 1.0 to 1.1 and to 2.0. To support automatic conversion of ontologies aligned with BFO, we previously developed the BFOconvert (Ref.). Considering such a conversion issue exists in many ontologies beyond BFO, we have expanded the BFOconvert program to Ontocow with additional features.</p>
+<p>Ontocow is developed to address the challenge of automatically converting and updating an ontology to a new version. Ontocow works by updating IRIs, imported ontologies, and the header portion of the ontology. </p>
+<p>The   <a href="http://ifomis.uni-saarland.de/bfo/">Basic Formal Ontology (BFO)</a> is the most commonly used upper level ontology with over 100 domain ontologies using BFO. BFO contains two branches, continuant and occurrent. The continuant branch represents time-independent entity such as material entity, and the occurrent branch represents time-related entity such as process. By aligning different domain ontologies under the two branches of BFO, we will be able to generate a comprehensive ontology-level structure that covers broad biological areas. Using this model, all data (including classes and instances) will be aligned together, supporting seamless data integration. BFO is the default upper level ontology for the Open Biological/Biomedical Ontology (OBO) Foundry ontology community. The OBO ontologies follow the <a href="http://obofoundry.org/crit.shtml">OBO Foundry  principles</a> such as openness and collaboration. </p>
+<p>BFOConvert is an Ontocow subprogram that automatically updates an ontology using a BFO old version to an ontology with a newly updated BFO version. </p>
+<p>BFOConvert was initially launched in 2012. In 2012, BFO was updated from version 1.1 to a &quot;Pre-Graz&quot; version and a 2.0 Graz release version. The initial BFOConvert program could be used to update the BFO terms from BFO version 1.1 in an ontology to a newer version. </p>
+<p>The official BFO 2 release is available in July 2015. To meet the critical need of migrating an old version of BFO to the new BFO 2 version, we have updated the BFOConvert program in July 2015. Therefore, we consider the BFOConvert program as  a timely program to ensure collaborative ontology development and interoperability among ontologies. </p>
+<p>In addition to BFO conversion, BFOConvert also supports the conversion of the OBO Relation Ontology (RO). Furthermore, BFOConvert can be used to convert an ontology with a customized IRI mapping file with a scope  beyond BFO and RO. </p>
+<p>After the BFOConvert showed its success, we have further expanded the program to Ontocow with a purpose to make it fit with broader scope of usages. With Ontocow, we can update an ontology that goes beyond the BFO and RO. </p>
+<p>&nbsp;</p>
+
+</div>
+<footer th:include="/layout :: footerSection">
+</footer>
+</body>
+</html>

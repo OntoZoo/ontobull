@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Ontocow</title>
+<link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript" th:fragment="jsSection">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4869243-8']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<header th:fragment="headerSection">
+	<div id="topbanner">
+		<a href="index.html" th:href="@{/}" style="font-size: 36px; color: #111144; text-decoration: none">Ontocow</a>
+	</div>
+	<div id="topnav">
+		<a href="index.html" th:href="@{/}" class="topnav">Home</a>
+		<a href="introduction.html" th:href="@{/introduction}" class="topnav">Introduction</a>
+		<a href="bfoconvert.html" th:href="@{/bfoconvert}" class="topnav">BFOConvert</a>
+		<a href="tutorial.html" th:href="@{/tutorial}" class="topnav">Tutorial</a>
+		<a href="faqs.html" th:href="@{/faqs}" class="topnav">FAQs</a>
+		<a href="references.html" th:href="@{/references}" class="topnav">References</a>
+		<a href="download.html" th:href="@{/download}" class="topnav">Download</a>
+		<a href="links.html" th:href="@{/links}" class="topnav">Links</a>
+		<a href="contactus.html" th:href="@{/contactus}" class="topnav">Contact</a>
+		<a href="acknowledge.html" th:href="@{/acknowledge}" class="topnav">Acknowledge</a>
+		<a href="news.html.html" th:href="@{/news}" class="topnav">News</a>
+	</div>
+</header>
+<div id="mainbody">
+	<h1>Hello world!</h1>
+</div>
+<footer th:fragment="footerSection">
+		<div id="footer">
+			<div id="footer_hl"></div>
+			<div id="footer_main">
+				<div id="footer_left">
+					<a href="http://www.hegroup.org" target="_blank">He Group</a><br /> University of Michigan Medical School<br /> Ann Arbor, MI 48109
+				</div>
+
+				<div id="footer_right">
+					<a href="http://www.umich.edu" target="_blank"> <img src="../../../images/wordmark_m_web.jpg" th:src="@{/images/wordmark_m_web.jpg}"
+						alt="UM Logo" width="166" height="20" border="0" />
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
