@@ -3,7 +3,7 @@
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Ontocow</title>
+<title>Ontobull</title>
 <link href="../../../css/styleMain.css" th:href="@{/css/styleMain.css}" rel="stylesheet" type="text/css"/>
 
 <script type="text/javascript" th:include="/layout :: jsSection">
@@ -12,8 +12,7 @@
 <body>
 <header th:include="/layout :: headerSection"></header>
 <div id="mainbody">
-
-<h3 class="header_darkred">BFO Convert: Convert an Ontology using BFO 1.1 as Top Ontology to a New ontology using BFO 2.0 graz</h3>
+<h3 class="header_darkred">Result</h3>
 <div th:if="${outputFile}">
 
 <h4>File generated: <a href="" th:href="@{'/userfiles/'+${outputFile}}" th:text="${outputFile}">nnnnnnnn.zip</a></h4>
